@@ -3,7 +3,7 @@ import AuthStack from './AuthStack'
 import { NavigationContainer } from '@react-navigation/native';
 import { AuthContext } from './AuthProvider';
 import auth from '@react-native-firebase/auth'
-import HomePage from '../Pages/HomePage';
+import AppStack from '../Authentication/AppStack'
 
 const Routes = () => {
 
@@ -24,7 +24,7 @@ const Routes = () => {
 
     return (
         <NavigationContainer>
-            {user ? <HomePage /> : <AuthStack />}
+            {user ? <AppStack /> : <AuthStack />}
         </NavigationContainer>
     )
 }
